@@ -33,6 +33,9 @@
                     </div>
                     <div class="col-xs-4"></div>
                 </form>
+                <% if (message.length > 0) { %>
+                    <div id="message" class="alert alert-danger"><%= message %></div>
+                <% } %>
             </div>
         </div>
         <% if (url.length > 0) { %>
@@ -43,8 +46,8 @@
           <ul>
             <% articles.forEach(function(article) { %>
               <a class="list-group-item" href="<%=article.link%>" >
-                <% if (article.image != null) { %><img src="<%=article.image.url%>" alt="article image" align="left" height="78" ><% } %>
-                <div <% if (article.image != null) { %>class="margin-left-150"<% } %>>
+                <% if (article.image != null || article.image != unknown) { %><img src="<%=article.image.url%>" alt="article image" align="left" height="78" ><% } %>
+                <div <% if (article.image != null || article.image != (unknown)) { %>class="margin-left-150"<% } %>>
                   <h3 ><%= article.title%></h3>
                   <small class="pull-right"><%=article.date%></small>
                   <% if (article.author > 0) { %><small>Author : <%=article.author%></small><br><% } %>

@@ -10,11 +10,15 @@ var express  = require('express');
 
 var app      = express();
 
+var sslRedirect = require('heroku-ssl-redirect');
+
 var port     = process.env.PORT || 8080;
 
 var bodyParser   = require('body-parser');
 
 
+// enable ssl redirect
+app.use(sslRedirect());
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json 
