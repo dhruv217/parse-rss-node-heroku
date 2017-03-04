@@ -1,0 +1,10 @@
+node_modules/
+test.js
+static/bower/
+bin/
+obj/
+.ntvs_analysis.dat
+Conmag.njsproj
+Conmag.sln
+Conmag.v12.suo
+snippets.txt
