@@ -58,9 +58,9 @@ module.exports = function(app) {
     app.post('/rssUrl', function(req, res) {
         rssUrl = req.body.rssUrl;
         if (rssUrl != null) {
-            res.redirect('/');
-        } else {
             res.redirect('/feed');
+        } else {
+            res.redirect('/');
         }
     });
 
