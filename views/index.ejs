@@ -43,8 +43,8 @@
           <ul>
             <% articles.forEach(function(article) { %>
               <a class="list-group-item" href="<%=article.link%>" >
-                <% if (articles.image.length > 0) { %><img src="<%=article.image.url%>" alt="article image" align="left" height="78" ><% } %>
-                <div <% if (articles.image.length > 0) { %>class="margin-left-150"<% } %>>
+                <% if (article.image != null) { %><img src="<%=article.image.url%>" alt="article image" align="left" height="78" ><% } %>
+                <div <% if (article.image != null) { %>class="margin-left-150"<% } %>>
                   <h3 ><%= article.title%></h3>
                   <small class="pull-right"><%=article.date%></small>
                   <% if (article.author > 0) { %><small>Author : <%=article.author%></small><br><% } %>
