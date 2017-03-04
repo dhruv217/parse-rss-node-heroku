@@ -47,7 +47,7 @@ module.exports = function(app) {
                     res.render('index.ejs', {
                         url: "",
                         articles: "",
-                        message : result.message;
+                        message : result.message
                     });
                 }
             });
